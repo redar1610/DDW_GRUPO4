@@ -1,73 +1,129 @@
-
 body {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+  background-color:black;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  background-color:#333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 5px;
+}
+
+.navbar img {
+  width: 50px;
+  height: auto;
+  margin-right: auto; /* Empuja la imagen hacia la izquierda */
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-links a {
+  color: lightpink;
+  text-decoration: none;
+  padding: 15px;
   
-  .navbar {
-    background-color: #1b1717;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 20px 0px 5px;
+  display: inline-block;
+}
+.navbar a {
+  color:aquamarine;
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+
+.content {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+/* Estilos para las secciones */
+.section {
+  height: 500px; /* Altura de las secciones */
+}
+
+#inicio {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  background-color:lightgreen;
+}
+h1 {
+  font-size: 60px;
+  line-height: 90px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:aliceblue;
+}
+
+
+#acerca {
+  background-color: rgb(204, 204, 204);
+  color: chocolate;
+}
+.info {
+  padding: 100px 0px;
+  display: flex;
+  align-items: center;
   }
-  
-  .navbar img {
-    width: 50px;
-    height: auto;
-    margin-right: auto; /* Empuja la imagen hacia la izquierda */
+  .info-img {
+  width: 50%;
   }
-  
-  .navbar-links {
-    display: flex;
-    justify-content: flex-end;
+  .info-img img{
+  width: 500px;
+  height: 250px;
   }
-  
-  .navbar-links a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px;
-    
-    display: inline-block;
+  .info-txt {
+  width: 50%;
   }
-  .navbar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px;
-    display: inline-block;
+  .info-txt h1 {
+  font-size: 50px;
+  color: aliceblue;
+  font-weight: 800;
+  text-transform:uppercase;
+  margin-bottom: 25px;
+  }
+  .info-txt p {
+  font-size: 18px;
+  color: aliceblue;
+  margin-bottom: 10px;
+  }
+  .btn-2 {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color:orangered;
+  color: whitesmoke;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 50px;
+  }
+  .btn-2:hover {
+  background-color:orangered;
+  }
+  .header-txt a {
+  font-size: 16px;
+  color: #545454;
+  margin-bottom: 35px;
   }
 
-  .content {
-    margin-top: 60px;
-    padding: 20px;
+#contacto {
+  background-color: #999;
+}
+a {
+  color:aliceblue;
+  cursor: pointer;
+  text-decoration: line-through;
+ 
   }
   
-  /* Estilos para las secciones */
-  .section {
-    height: 500px; /* Altura de las secciones */
-  }
-  
-  #inicio {
-    background-color: #f1f1f1;
-  }
-  
-  #acerca {
-    background-color: #ccc;
-  }
-  
-  #contacto {
-    background-color: #999;
-  }
-  a {
-    color: lightseagreen;
-    cursor: pointer;
-    text-decoration: line-through;
-   
-    }
-    
 /*
 
 1 auto: El navegador determina el estilo de cursor apropiado según el contexto.
@@ -82,69 +138,68 @@ body {
 */
 
 
-    a:link {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: steelblue;
-      }
-      a:visited {
-       color: olive;
-      }
-      a:hover {
-        background-color: dimgrey;
-        color: white;
-        transition-property: color, background-color;
-        transition-duration: 300ms, 400ms;
-        transition-timing-function: ease-in, ease-out;
-      }
-      a:active {
-       background-color: rgb(223, 63, 63);
-      }
-      footer {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #181515;
-        color: #ccc;
-        padding: 10px;
-        text-align: center;
-        font-size: 14px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
-      .footer-icons {
-        display: flex;
-        justify-content: flex-end;
-      }
-      
-      .footer-icons a {
-        color: #333;
-        margin-left: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: transparent;
-        transition: background-color 0.3s ease-in-out;
-      }
-      
-      .footer-icons a:hover {
-        background-color: #333;
-      }
-      
-      .footer-icons a i {
-        color: #fffafa;
-      }
-      
-      .footer-text {
-        margin-top: 5px;
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
+  a:link {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:honeydew;
+    }
+    a:visited {
+     color:gold;
+    }
+    a:hover {
+      background-color: dimgrey;
+      color:aquamarine;
+      transition-property: color, background-color;
+      transition-duration: 300ms, 400ms;
+      transition-timing-function: ease-in, ease-out;
+    }
+    a:active {
+     background-color: rgb(223, 63, 63);
+    }
+    footer {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color:aliceblue;
+      color: #ccc;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer-icons {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .footer-icons a {
+      color: #333;
+      margin-left: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: transparent;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .footer-icons a:hover {
+      background-color:aliceblue;
+    }
+    
+    .footer-icons a i {
+      color: blueviolet;
+    }
+    
+    .footer-text {
+      margin-top: 5px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
