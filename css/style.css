@@ -1,12 +1,12 @@
-
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: sans-serif;
 }
 
 .navbar {
-  background-color: #ff8d01;
+  background-color: #000000;
   position: fixed;
   top: 0;
   width: 100%;
@@ -31,13 +31,13 @@ body {
   color: #fff;
   text-decoration: none;
   padding: 15px;
-  
   display: inline-block;
 }
+
 .navbar a {
   color: #fff;
   text-decoration: none;
-  padding: 15px;
+  padding: 15px;  
   display: inline-block;
 }
 
@@ -46,44 +46,236 @@ body {
   padding: 20px;
 }
 
+/* Funciones de navbar para celular */
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .abrir-menu,
+  .cerrar-menu {
+      display: block;
+      border: 0;
+      font-size: 1.25rem;
+      background-color: transparent;
+      cursor: pointer;
+  }
+
+  .abrir-menu {
+      color: #ffffff;
+  }
+
+  .cerrar-menu {
+      color: #ffffff;
+  }
+
+  .nav {
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #1c1c1c;
+      padding: 2rem;
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+  }
+
+  .nav.visible {
+      opacity: 1;
+      visibility: visible;
+  }
+  
+  .nav-list {
+      flex-direction: column;
+      align-items: end;
+  }
+
+  .nav-list li a {
+      color: #ecececec;
+  }
+}
+
 /* Estilos para las secciones */
 .section {
   height: 500px; /* Altura de las secciones */
 }
 
+/* Seccion Inicio */
 #inicio {
+  background-color: #181515;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.contenedor-1__img{
+  width: 60%;
+  align-items: flex-end;
+}
+
+.contenedor-1__text{
+  width: 35%;
+}
+
+.contenedor-1__text h2{
+  font-size: 40px;
+  color: orange;
+}
+
+.contenedor-1__text p{
+  font-size: 18px;
+  margin: 40px 0;
+}
+
+.contenedor-1__text a{
   background-color: orange;
-  color: #f7f1f1;
+  color: #fff;
+  width: 50%;
+  height: 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.contenedor-1__text a:hover{
+  background-color: #222222;
+  color: #fff;
+  transition: 0.5s;
+}
+
+
+/* Fin de Seccion Inicio */
+
+/* Seccion Acerca */
+#acerca {
+  background-color: #181515;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
-  
 }
 
-#inicio h1{
-  color: #fa8900;
-  padding: 5px;
+.contenedor-2{
+  background-color: #f6eedf;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f64b3c;
 }
 
-#inicio img{
-  margin:0 auto;
-  border-radius: 10px;
-  display: block;
+.contenedor-2__titulo{
+  font-size: 25px;
+  color: orange;
 }
 
-#acerca {
-  background-color: #ccc;
+.contenedor-2__paquete{
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.paquete{
+  background-color: #fff;
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 10px 10px;
+}
+
+.paquete h3{
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.paquete img{
+  object-fit: cover;
+  width: 25%;
+}
+
+.paquete h4{
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.paquete p{
+  font-size: 16px;
+}
+
+.paquete a{
+  background-color: orange;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.paquete a:hover{
+  background-color: #222222;
+  color: #fff;
+  transition: 0.2s;
+}
+/* Fin de seccion Acerca */
+
+/* Seccion Contacto */
 #contacto {
-  background-color: #999;
+  background-color:#181515;
+  color: #ffffff;
+  font-family: 'AvenirLTStd-Book.otf', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
 }
-a {
-  color: lightseagreen;
-  cursor: pointer;
-  text-decoration: line-through;
+
+#contacto img{
+  width: 400px;
+  height: 200px;
+  padding: 15px 40px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;  
+}
+
+#contacto h1{
+  color: orange;
+  padding: 5px;
+  font-family: 'Pacifico', cursive;
  
   }
-  
+
+/* Fin de Seccion Contacto */
+
 /*
 
 1 auto: El navegador determina el estilo de cursor apropiado según el contexto.
@@ -164,26 +356,3 @@ a {
       align-items: center;
     }
 
-
-    #contacto img{
-      width: 400px;
-      height: 200px;
-      padding: 0.1%;
-      border-radius: 10px;
-      display: block;}
-      
-
-    #contacto {
-       background-color: aquamarine;
-       color: #161313;
-       font-family: 'AvenirLTStd-Book.otf', sans-serif;
-       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)}
-
-    #contacto h1{
-      color: blue;
-      padding: 5px;
-      font-family: 'Pacifico', cursive;
-     
-      }
-
-      
