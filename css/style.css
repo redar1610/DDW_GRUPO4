@@ -1,12 +1,12 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  background-color:black;
-  font-family:Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .navbar {
-  background-color:#333;
+  background-color: #000000;
   position: fixed;
   top: 0;
   width: 100%;
@@ -28,16 +28,16 @@ body {
 }
 
 .navbar-links a {
-  color: lightpink;
+  color: #fff;
   text-decoration: none;
   padding: 15px;
-  
   display: inline-block;
 }
+
 .navbar a {
-  color:aquamarine;
+  color: #fff;
   text-decoration: none;
-  padding: 15px;
+  padding: 15px;  
   display: inline-block;
 }
 
@@ -46,84 +46,236 @@ body {
   padding: 20px;
 }
 
+/* Funciones de navbar para celular */
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .abrir-menu,
+  .cerrar-menu {
+      display: block;
+      border: 0;
+      font-size: 1.25rem;
+      background-color: transparent;
+      cursor: pointer;
+  }
+
+  .abrir-menu {
+      color: #ffffff;
+  }
+
+  .cerrar-menu {
+      color: #ffffff;
+  }
+
+  .nav {
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #1c1c1c;
+      padding: 2rem;
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+  }
+
+  .nav.visible {
+      opacity: 1;
+      visibility: visible;
+  }
+  
+  .nav-list {
+      flex-direction: column;
+      align-items: end;
+  }
+
+  .nav-list li a {
+      color: #ecececec;
+  }
+}
+
 /* Estilos para las secciones */
 .section {
   height: 500px; /* Altura de las secciones */
 }
 
+/* Seccion Inicio */
 #inicio {
+  background-color: #181515;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin-top: 100px;
-  background-color:lightgreen;
-}
-h1 {
-  font-size: 60px;
-  line-height: 90px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:chocolategit;
+  color: #fff;
 }
 
-
-#acerca {
-  background-color: rgb(204, 204, 204);
-  color: chocolate;
+.contenedor-1__img{
+  width: 60%;
+  align-items: flex-end;
 }
-.info {
-  padding: 100px 0px;
-  display: flex;
-  align-items: center;
-  }
-  .info-img {
-  width: 50%;
-  }
-  .info-img img{
-  width: 500px;
-  height: 250px;
-  }
-  .info-txt {
-  width: 50%;
-  }
-  .info-txt h1 {
-  font-size: 50px;
-  color: aliceblue;
-  font-weight: 800;
-  text-transform:uppercase;
-  margin-bottom: 25px;
-  }
-  .info-txt p {
+
+.contenedor-1__text{
+  width: 35%;
+}
+
+.contenedor-1__text h2{
+  font-size: 40px;
+  color: orange;
+}
+
+.contenedor-1__text p{
   font-size: 18px;
-  color: aliceblue;
-  margin-bottom: 10px;
-  }
-  .btn-2 {
-  display: inline-block;
-  padding: 15px 35px;
-  background-color:orangered;
-  color: whitesmoke;
-  font-weight: 800;
-  text-transform: uppercase;
-  border-radius: 50px;
-  }
-  .btn-2:hover {
-  background-color:orangered;
-  }
-  .header-txt a {
-  font-size: 16px;
-  color: #545454;
-  margin-bottom: 35px;
-  }
-
-#contacto {
-  background-color: #999;
+  margin: 40px 0;
 }
-a {
-  color:aliceblue;
-  cursor: pointer;
-  text-decoration: line-through;
+
+.contenedor-1__text a{
+  background-color: orange;
+  color: #fff;
+  width: 50%;
+  height: 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.contenedor-1__text a:hover{
+  background-color: #222222;
+  color: #fff;
+  transition: 0.5s;
+}
+
+
+/* Fin de Seccion Inicio */
+
+/* Seccion Acerca */
+#acerca {
+  background-color: #181515;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+}
+
+.contenedor-2{
+  background-color: #f6eedf;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f64b3c;
+}
+
+.contenedor-2__titulo{
+  font-size: 25px;
+  color: orange;
+}
+
+.contenedor-2__paquete{
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paquete{
+  background-color: #fff;
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 10px 10px;
+}
+
+.paquete h3{
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.paquete img{
+  object-fit: cover;
+  width: 25%;
+}
+
+.paquete h4{
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.paquete p{
+  font-size: 16px;
+}
+
+.paquete a{
+  background-color: orange;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.paquete a:hover{
+  background-color: #222222;
+  color: #fff;
+  transition: 0.2s;
+}
+/* Fin de seccion Acerca */
+
+/* Seccion Contacto */
+#contacto {
+  background-color:#181515;
+  color: #ffffff;
+  font-family: 'AvenirLTStd-Book.otf', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+#contacto img{
+  width: 400px;
+  height: 200px;
+  padding: 15px 40px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;  
+}
+
+#contacto h1{
+  color: orange;
+  padding: 5px;
+  font-family: 'Pacifico', cursive;
  
   }
-  
+
+/* Fin de Seccion Contacto */
+
 /*
 
 1 auto: El navegador determina el estilo de cursor apropiado según el contexto.
@@ -140,27 +292,27 @@ a {
 
   a:link {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color:honeydew;
+  color: #f5f4f4;
     }
     a:visited {
-     color:gold;
+     color: rgb(255, 255, 255);
     }
     a:hover {
-      background-color: dimgrey;
-      color:aquamarine;
+      background-color: orange;
+      color: white;
       transition-property: color, background-color;
       transition-duration: 300ms, 400ms;
       transition-timing-function: ease-in, ease-out;
     }
     a:active {
-     background-color: rgb(223, 63, 63);
+     background-color: rgb(255, 255, 255)
     }
     footer {
       position: relative;
       bottom: 0;
       left: 0;
       width: 100%;
-      background-color:aliceblue;
+      background-color: #181515;
       color: #ccc;
       padding: 10px;
       text-align: center;
@@ -189,11 +341,11 @@ a {
     }
     
     .footer-icons a:hover {
-      background-color:aliceblue;
+      background-color: #333;
     }
     
     .footer-icons a i {
-      color: blueviolet;
+      color: #fffafa;
     }
     
     .footer-text {
@@ -203,3 +355,4 @@ a {
       justify-content: center;
       align-items: center;
     }
+
